@@ -1,0 +1,85 @@
+{
+  "asyncapi": "3.0.0",
+  "info": {
+    "title": "Plant Store Realtime API",
+    "version": "1.0.0",
+    "description": "A sample AsyncAPI spec that documents websocket channels for realtime plant updates."
+  },
+  "servers": {
+    "production": {
+      "host": "sandbox.mintlify.com",
+      "protocol": "wss",
+      "description": "Production websocket server"
+    }
+  },
+  "channels": {
+    "plantUpdates": {
+      "address": "plants/{id}/updates",
+      "messages": {
+        "plantUpdated": {
+          "$ref": "#/components/messages/PlantUpdated"
+        }
+      }
+    }
+  },
+  "operations": {
+    "receivePlantUpdates": {
+      "action": "receive",
+      "channel": {
+        "$ref": "#/channels/plantUpdates"
+      },
+      "summary": "Receive realtime updates for a specific plant",
+      "messages": [
+        {
+          "$ref": "#/channels/plantUpdates/messages/plantUpdated"
+        }
+      ]
+    }
+  },
+  "components": {
+    "messages": {
+      "PlantUpdated": {
+        "name": "PlantUpdated",
+        "title": "Plant updated event",
+        "summary": "Triggered when a plant record changes",
+        "payload": {
+          "type": "object",
+          "required": [
+            "id",
+            "status",
+            "updatedAt"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer",
+              "description": "The plant ID",
+              "examples": [
+                42
+              ]
+            },
+            "status": {
+              "type": "string",
+              "description": "Current lifecycle status",
+              "enum": [
+                "seed",
+                "sprout",
+                "mature"
+              ],
+              "examples": [
+                "sprout"
+              ]
+            },
+            "updatedAt": {
+              "type": "string",
+              "format": "date-time",
+              "description": "When the update was emitted",
+              "examples": [
+                "2026-02-23T12:34:56Z"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
