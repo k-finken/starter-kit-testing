@@ -1,0 +1,49 @@
+---
+title: "Développement"
+description: "Prévisualisez les changements localement avant de déployer"
+---
+
+<Info>
+  **Prérequis** :
+  - Node.js version 19 ou supérieure
+  - Un dépôt de documentation avec un fichier `docs.json`
+</Info>
+
+Suivez ces étapes pour installer et exécuter Mintlify sur votre système. Le CLI fournit une prévisualisation locale pour voir les changements avant le déploiement.
+
+<Steps>
+<Step title="Installer le CLI Mintlify">
+
+```bash
+npm i -g mint
+```
+</Step>
+
+<Step title="Prévisualiser localement">
+
+Accédez au répertoire de vos docs où se trouve le fichier `docs.json`, puis exécutez :
+
+```bash
+mint dev
+```
+
+Une prévisualisation locale de votre documentation sera disponible sur `http://localhost:3000`.
+
+</Step>
+</Steps>
+
+## Ports personnalisés
+
+Par défaut, Mintlify utilise le port 3000. Vous pouvez personnaliser le port avec l'option `--port`. Par exemple, pour utiliser le port 3333 :
+
+```bash
+mint dev --port 3333
+```
+
+## Déploiement
+
+Si le déploiement réussit, vous verrez :
+
+<Frame>
+  <img src="/images/checks-passed.png" alt="Capture d'écran de confirmation de déploiement" style={{ borderRadius: '0.5rem' }} />
+</Frame>

@@ -9,66 +9,6 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook",
-              "api-reference/endpoint/plant-updates"
-            ]
-          }
-        ]
-      }
-    ],
     "global": {
       "anchors": [
         {
@@ -82,7 +22,118 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "languages": [
+      {
+        "language": "en",
+        "default": true,
+        "tabs": [
+          {
+            "tab": "Guides",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": ["index", "quickstart", "development"]
+              },
+              {
+                "group": "Customization",
+                "pages": ["essentials/settings", "essentials/navigation"]
+              },
+              {
+                "group": "Writing content",
+                "pages": [
+                  "essentials/markdown",
+                  "essentials/code",
+                  "essentials/images",
+                  "essentials/reusable-snippets"
+                ]
+              },
+              {
+                "group": "AI tools",
+                "pages": [
+                  "ai-tools/cursor",
+                  "ai-tools/claude-code",
+                  "ai-tools/windsurf"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API reference",
+            "groups": [
+              {
+                "group": "API documentation",
+                "pages": ["api-reference/introduction"]
+              },
+              {
+                "group": "Endpoint examples",
+                "pages": [
+                  "api-reference/endpoint/get",
+                  "api-reference/endpoint/create",
+                  "api-reference/endpoint/delete",
+                  "api-reference/endpoint/webhook",
+                  "api-reference/endpoint/plant-updates"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "fr",
+        "tabs": [
+          {
+            "tab": "Guides",
+            "groups": [
+              {
+                "group": "Pour commencer",
+                "pages": ["fr/index", "fr/quickstart", "fr/development"]
+              },
+              {
+                "group": "Personnalisation",
+                "pages": ["fr/essentials/settings", "fr/essentials/navigation"]
+              },
+              {
+                "group": "Rédaction",
+                "pages": [
+                  "fr/essentials/markdown",
+                  "fr/essentials/code",
+                  "fr/essentials/images",
+                  "fr/essentials/reusable-snippets"
+                ]
+              },
+              {
+                "group": "Outils IA",
+                "pages": [
+                  "fr/ai-tools/cursor",
+                  "fr/ai-tools/claude-code",
+                  "fr/ai-tools/windsurf"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Référence API",
+            "groups": [
+              {
+                "group": "Documentation API",
+                "pages": ["fr/api-reference/introduction"]
+              },
+              {
+                "group": "Exemples d'endpoints",
+                "pages": [
+                  "fr/api-reference/endpoint/get",
+                  "fr/api-reference/endpoint/create",
+                  "fr/api-reference/endpoint/delete",
+                  "fr/api-reference/endpoint/webhook",
+                  "fr/api-reference/endpoint/plant-updates"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
